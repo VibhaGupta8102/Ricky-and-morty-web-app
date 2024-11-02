@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px; /* Set width of the scrollbar */
+  background-color: rgb(73, 73, 73);
+}
+
+/* ############ utility classes #############  */
+.bg-black {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+.bg-medium {
+  background-color: #202020;
+}
+.bg-grey {
+  background-color: #121212;
+}
+.rounded {
+  border-radius: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.app-container {
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+/* ************** header styling ***************  */
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 5px;
+  border-bottom: 1px solid #444;
+}
+
+.header h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* ************ sidebar  styling*************  */
+.sidebar {
+  min-width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  /* border: 2px solid green; */
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+.episode-item {
+  /* border: 1px solid yellow; */
+  cursor: pointer;
+  min-height: 4rem;
+  width: 24rem;
+  padding: 0.2em;
+  margin: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.selected {
+  background-color: #a79d9d33; /* Highlight color */
+  color: white;
+}
+
+/********************** main view styling  ***************/
+
+.main-view {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between;
+  gap: 5px; */
+  /* overflow-y: scroll; */
+  margin: 5px;
+  gap: 5px;
+  flex-grow: 1;
+  /* overflow-y: auto; */
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 5px;
+  overflow-y: auto;
+}
+
+.character-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.character-card img {
+  width: 200px;
+  flex-direction: column;
+  /* position: relative; */
+  margin: 5px;
+  padding: 5px;
+}
+
+@media (max-width: 1300px) {
+  .sidebar {
+    position: absolute;
+    left: -120%;
+    transition: all 0.4s;
+    z-index: 1;
+    width: 352px;
+    height: 90vh;
+  }
+  .hamburger {
+    display: inline;
+  }
+
+  .sidebar.visible {
+    left: 0; /* Slide in */
+  }
+}
+
+/* ##################### pagination styling ##############  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.page-button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.page-button.active {
+  background-color: #888;
+  font-weight: bold;
+}
+
+.page-button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
