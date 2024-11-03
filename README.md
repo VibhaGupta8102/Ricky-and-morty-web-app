@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+Rick and Morty Image Feed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React and TypeScript application that displays episodes and character images from the Rick and Morty API. Users can select an episode from the sidebar, which will display the associated characters in the main view. The project also includes styled components and a responsive layout for a smooth user experience.
 
-## Available Scripts
+Table of Contents
 
-In the project directory, you can run:
+Technologies Used
+Installation
+Running the Project
+Features
+API Documentation
+Screenshots
+License
 
-### `npm start`
+Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React with TypeScript for the frontend framework
+Axios for API requests
+Tailwind CSS or Bootstrap (optional) for styling
+Rick and Morty API for episode and character data
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Installation
 
-### `npm test`
+Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone <repository-url>
+cd <repository-directory>
 
-### `npm run build`
+Install Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Running the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the Development Server
 
-### `npm run eject`
+npm start
+Open http://localhost:3000 in your browser to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Episode Selection:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A sidebar displays a list of episodes from the Rick and Morty API.
+Clicking an episode highlights it and displays its characters.
+Character Display:
+Displays character images and names for the selected episode.
+Dynamic Styling:
+Selected episode is visually highlighted for easy navigation.
+Responsive layout with CSS Grid and Flexbox.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+API Documentation
 
-## Learn More
+This project uses the public Rick and Morty API to fetch episode and character data.
+Episodes: /api/episode – Fetches list of episodes.
+Characters by Episode: /api/character – Fetches character data for each selected episode.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Initial Page Load**:
+
+   - Displays the episode list on the left.
+
+   ![Initial Page Load](./assets/ss1.JPG)
+
+2. **Episode Selected**:
+
+   - Shows character images and names on the main view.
+
+   ![Episode Selected](./assets/ss2.JPG)
+
+License
+This project is open-source and available under the MIT License.
