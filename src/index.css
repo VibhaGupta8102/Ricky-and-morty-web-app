@@ -159,6 +159,16 @@
   }
 }
 
+@media (max-width: 350px) {
+  .header {
+    font-size: 0.8rem;
+  }
+  .sidebar {
+    max-width: 95vw;
+    padding: 2px;
+  }
+}
+
 /* ##################### pagination styling ##############  */
 .pagination {
   display: flex;
